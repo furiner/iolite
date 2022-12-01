@@ -1,0 +1,40 @@
+{
+  "name": "iolite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "dist": "npm run build && electron-builder --dir"
+  },
+  "keywords": [],
+  "author": "Irisu",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/discord-rpc": "^4.0.3",
+    "babel-preset-solid": "^1.6.2",
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0",
+    "typescript": "^4.9.3",
+    "vite": "^3.2.4",
+    "vite-plugin-electron": "^0.10.4",
+    "vite-plugin-electron-renderer": "^0.11.3",
+    "vite-plugin-solid": "^2.4.0"
+  },
+  "dependencies": {
+    "discord-rpc": "^4.0.1",
+    "dotenv": "^16.0.3",
+    "solid-js": "^1.6.2"
+  },
+  "build": {
+    "appId": "us.irisu.iolite",
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  }
+}
