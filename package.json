@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "dist": "npm run build && electron-builder --dir --config electron-builder.json"
+    "dist": "npm run build && npm run dist:package",
+    "dist:package": "electron-packager . --out=./out/"
   },
   "keywords": [],
   "author": "Irisu",
@@ -16,6 +17,8 @@
     "babel-preset-solid": "^1.6.2",
     "electron": "^22.0.0",
     "electron-builder": "^23.6.0",
+    "electron-packager": "^17.1.1",
+    "sass": "^1.56.1",
     "typescript": "^4.9.3",
     "vite": "^3.2.4",
     "vite-plugin-electron": "^0.10.4",
@@ -26,5 +29,15 @@
     "discord-rpc": "^4.0.1",
     "dotenv": "^16.0.3",
     "solid-js": "^1.6.2"
+  },
+  "build": {
+    "appId": "us.irisu.iolite",
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    }
   }
 }

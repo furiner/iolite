@@ -1,7 +1,8 @@
 import { createEffect } from "solid-js";
 import { render } from "solid-js/web";
 
-console.log("hi");
+// Stylesheets
+import "./styles/app.scss";
 
 render(() => {
     let ref: HTMLDivElement | undefined = undefined;
