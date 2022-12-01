@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "dist": "npm run build && electron-builder --dir"
+    "dist": "npm run build && electron-builder --dir --config electron-builder.json"
   },
   "keywords": [],
   "author": "Irisu",
@@ -26,15 +26,5 @@
     "discord-rpc": "^4.0.1",
     "dotenv": "^16.0.3",
     "solid-js": "^1.6.2"
-  },
-  "build": {
-    "appId": "us.irisu.iolite",
-    "files": [
-      "dist/**/*",
-      "package.json"
-    ],
-    "win": {
-      "target": "nsis"
-    }
   }
 }

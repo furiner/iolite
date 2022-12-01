@@ -1,0 +1,10 @@
+{
+    "appId": "us.irisu.iolite",
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    }
+}
