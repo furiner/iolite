@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "dist": "npm run build && npm run dist:package",
-    "dist:package": "electron-packager . --out=./out/"
+    "dist:package": "electron-packager . --out=./out/ --asar"
   },
   "keywords": [],
   "author": "Irisu",
@@ -28,6 +28,7 @@
   "dependencies": {
     "discord-rpc": "^4.0.1",
     "dotenv": "^16.0.3",
+    "realm": "^11.3.0",
     "solid-js": "^1.6.2"
   },
   "build": {

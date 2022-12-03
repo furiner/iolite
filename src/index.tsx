@@ -21,3 +21,7 @@ render(() => {
         </div>
     );
 }, document.getElementById("main") as HTMLDivElement);
+
+if (import.meta.hot) {
+    import.meta.hot.accept();
+}
